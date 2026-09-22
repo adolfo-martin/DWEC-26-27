@@ -11,3 +11,8 @@ frutas.add('melón');
 console.clear();
 console.log(frutas.size);
 console.table(frutas);
+
+const frutasComoArreglo = Array.from(frutas);
+frutasComoArreglo.push('manzana');
+console.table(frutasComoArreglo.sort());
+

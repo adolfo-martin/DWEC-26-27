@@ -1,2 +1,0 @@
-# DWEC-26-27
-DWES este curso 2026-2027
