@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <style>
+        table, tr, th, td {
+            border: solid;
+            border-collapse: collapse;
+        }
+
+        img {
+            width: 100px;
+        }
+    </style>
+
     <script type="module" src="./code/code.js"></script>
 </head>
 <body>
@@ -18,21 +29,21 @@
 
     </div>
 
-    <table border="1">
+    <table>
         <thead>
             <tr>
                 <th>Modelo</th>
                 <th>Foto</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="tTbdVehicles">
             <!-- DOM -->
-            <tr>
+            <!-- <tr>
                 <td>Volkswagen Golf</td>
                 <td>
                     <img style="height: 50px;" src="./photos/volkswagen_golf.png">
                 </td>
-            </tr>
+            </tr> -->
             <!-- DOM -->
         </tbody>
     </table>
