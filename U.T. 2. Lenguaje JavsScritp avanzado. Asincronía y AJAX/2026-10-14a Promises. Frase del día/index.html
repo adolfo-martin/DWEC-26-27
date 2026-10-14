@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="module">
+        fetch('https://favqs.com/api/qotd')
+            .then(response => response.json()) // preprocesamiento previo
+            .then(showQuoteAndAuthor);
+
+        function showQuoteAndAuthor(data) {
+            const quote = data.quote.body;
+            const author = data.quote.author;
+            document.getElementById('tParQuote').textContent = quote;
+            document.getElementById('tParAuthor').textContent = author;
+        }
+    </script>
+</head>
+<body>
+    <h1>Frase del día</h1>
+
+    <div id="tParQuote"></div>
+    <div id="tParAuthor"></div>
+</body>
+</html>
