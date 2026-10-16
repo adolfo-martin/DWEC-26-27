@@ -1,0 +1,4 @@
+GET https://dummyjson.com/products/categories
+
+###
+GET https://dummyjson.com/products/category/fragrances
