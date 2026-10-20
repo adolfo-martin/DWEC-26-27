@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="./code.js"></script>
+</head>
+<body>
+    <h1>Servicio de nombres</h1>
+
+    <form>
+        <label>Indica la cantidad de nombres: </label>
+        <input type="range" id="tRngQuantity" min="1" max="10" value="1">
+        <input type="number" id="tNumQuantity" disabled>
+
+        <br>
+        <input type="radio" name="genres" value="male" id="tRadMale">
+        <label for="tRadMale">Masculino</label>
+        <input type="radio" name="genres" value="female" id="tRadFemale">
+        <label for="tRadFemale">Femenino</label>
+        <input type="radio" name="genres" value="both" id="tRadBoth" checked>
+        <label for="tRadBoth">Ambos</label>
+
+        <br>
+        <br>
+        <button id="tButNames" type="button">Pedir nombres</button>
+
+        <br>
+        <ol id="tOlNames"></ol>
+    </form>
+</body>
+</html>

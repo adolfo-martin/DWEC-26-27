@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: white;
+}
+
+body {
+    min-height: 100dvh;
+    width: 1280px;
+    background-color: burlywood;
+    margin: auto;
+}
+
+section#tSctProducts {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    overflow-x: scroll;
+    scrollbar-color: #ff4757 #b7d4d7;
+    scrollbar-width: thin;
+    /* flex-wrap: wrap; */
+}
+
+article {
+    corner-shape: bevel;
+    /* border: solid; */
+    background-color: white;
+    /* border-radius: 1rem; */
+    padding: 1rem;
+
+    img {
+        width: 100px;
+    }
+}

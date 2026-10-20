@@ -27,7 +27,13 @@ async function mostrarProductosDeLaCategoria(e) {
     const products = await recuperarProductosDeLaCategoria(categoryId);
 
     const nSection = document.getElementById('tSctProducts');
+    // nSection.textContent = ''; // createTextNode
+    // nSection.innerText = '';   // createTextNode
     nSection.innerHTML = '';
+
+    // while (nSection.hasChildNodes()) {
+    //     nSection.removeChild(nSection.lastChild);
+    // }
 
     for (const product of products) {
         const nArticle = document.createElement('article');

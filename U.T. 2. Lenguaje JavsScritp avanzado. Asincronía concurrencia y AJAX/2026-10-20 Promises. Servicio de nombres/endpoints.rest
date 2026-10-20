@@ -1,0 +1,7 @@
+GET https://namey.muffinlabs.com/name.json
+
+###
+GET https://namey.muffinlabs.com/name.json?count=7
+
+### type: male, female, both
+GET https://namey.muffinlabs.com/name.json?count=7&type=both
