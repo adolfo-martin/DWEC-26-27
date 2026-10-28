@@ -9,7 +9,7 @@ export default class DummyRestService {
             // return data.map(category => ({ id: category.slug, name: category.name }));
             return data.map( ({ slug: id, name }) => ({ id, name }));
         } catch (e) {
-            console.error(e.message);
+            throw new DummyRestServiceException(e.message);
         }
     }
 
@@ -28,8 +28,14 @@ export default class DummyRestService {
                 image: images[0],
             }));
         } catch (e) {
-            console.error(e.message);
+            throw new DummyRestServiceException(e.message);
         }
+    }
+}
+
+class DummyRestServiceException extends Error {
+    constructor(message) {
+        super(`(EXCEPTION DummyRestServiceException): ${message}`);
     }
 }
 

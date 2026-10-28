@@ -2,3 +2,30 @@ GET https://dummyjson.com/products/categories?delay=1000
 
 ###
 GET https://dummyjson.com/products/category/smartphones?delay=1000
+
+### Probar traducción con Ollama
+POST http://192.168.0.102:11434/api/chat
+Content-Type: application/json
+
+{
+  "model": "translategemma:4b",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Translate the following text from English to Spanish. Return ONLY the translation."
+    },
+    {
+      "role": "user",
+      "content": "Hello world, this is a test of the translation model."
+    }
+  ],
+  "stream": false,
+  "options": {
+    "temperature": 0.1
+  }
+}
+
+### C  Create    Insert  POST     POST
+### R  Retrieve  Select  GET      POST
+### U  Update    Update  PUT      POST
+### D  Delete    Delete  DELETE   POST
