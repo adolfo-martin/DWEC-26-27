@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .coche {
+            width: 50px;
+            aspect-ratio: 1;
+            border: solid 10px transparent;
+            border-top-color: black;
+            border-radius: 50%;
+            animation: giro 1s linear infinite;
+        }
+
+        @keyframes giro {
+            from { rotate: 0turn }
+            to { rotate: 1turn }
+        }
+    </style>
+
+    <script type="module" src="./componentes/mi-semaforo-componente.js"></script>
+
+    <script type="module">
+        const nSemaforo = document.querySelector('mi-semaforo');
+        console.log(nSemaforo);
+        // nSemaforo.encenderPrecaucion();
+        nSemaforo.encenderNormal();
+
+        // const nAmbar = document.querySelector('.luz-ambar');
+        // console.log(nAmbar);
+
+        // coche 1 esta interesado en el semaforo
+        const nCoche1 = document.querySelector('.coche-1');
+        nCoche1.style.animationPlayState = 'paused';
+        nSemaforo.addEventListener('luzencendida', e => {
+            if (e.detail.color === 'rojo')
+                nCoche1.style.animationPlayState = 'paused';
+            if (e.detail.color === 'ambar')
+                nCoche1.style.animationDuration = '2s';
+            if (e.detail.color === 'verde')
+                nCoche1.style.animationPlayState = 'running';
+        });
+
+        // coche 2 esta interesado en el semaforo
+        const nCoche2 = document.querySelector('.coche-2');
+        nCoche2.style.animationPlayState = 'paused';
+        nSemaforo.addEventListener('luzencendida', e => {
+            if (e.detail.color === 'rojo')
+                nCoche2.style.animationPlayState = 'paused';
+            if (e.detail.color === 'ambar')
+                nCoche2.style.animationDuration = '0.5s';
+            if (e.detail.color === 'verde')
+                nCoche2.style.animationPlayState = 'running';
+        });
+
+    </script>
+</head>
+<body>
+    <mi-semaforo duracion-rojo="5000" duracion-ambar="1000" duracion-verde="5000"></mi-semaforo>
+
+    <div class="coche coche-1"></div>
+    <div class="coche coche-2"></div>
+    <div class="coche coche-3"></div>
+</body>
+</html>
