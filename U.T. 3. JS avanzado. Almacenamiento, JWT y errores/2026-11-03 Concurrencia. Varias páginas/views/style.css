@@ -26,9 +26,9 @@ body {
     text-align: center;
 }
 
-nav {
+/* nav {
     display: none;
-}
+} */
 
 .main-app {
     overflow-y: scroll;
