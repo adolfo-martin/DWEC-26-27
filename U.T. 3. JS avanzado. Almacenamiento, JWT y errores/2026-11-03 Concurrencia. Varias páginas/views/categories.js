@@ -16,7 +16,8 @@ categories.forEach(category => {
     nAnchor.textContent = category.name;
 
     const nImage = nArticle.appendChild(document.createElement('img'));
-    nImage.src = 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp';
+    // nImage.src = 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp';
+    nImage.src = category.image;
 });
 
 function cardClickedHandler(e) {

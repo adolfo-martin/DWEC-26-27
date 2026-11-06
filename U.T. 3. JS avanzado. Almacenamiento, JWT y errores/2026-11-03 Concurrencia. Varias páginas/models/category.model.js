@@ -1,6 +1,7 @@
 export class CategoryModel {
     #id;
     #name;
+    #image;
 
     constructor(id, name) {
         this.#id = id;
@@ -17,5 +18,13 @@ export class CategoryModel {
 
     set name(value) {
         this.#name = value;
+    }
+
+    get image() {
+        return this.#image;
+    }
+
+    set image(value) {
+        this.#image = value;
     }
 }

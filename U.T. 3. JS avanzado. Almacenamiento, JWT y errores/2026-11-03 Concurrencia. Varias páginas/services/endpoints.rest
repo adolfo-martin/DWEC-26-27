@@ -1,4 +1,7 @@
 GET https://dummyjson.com/products/categories
 
 ###
-GET https://dummyjson.com/products/1
+GET https://dummyjson.com/products/77
+
+### Recupera una única categoría empleando su identificador
+GET https://dummyjson.com/products/category/beauty
