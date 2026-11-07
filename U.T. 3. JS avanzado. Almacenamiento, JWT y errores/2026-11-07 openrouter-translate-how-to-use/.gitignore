@@ -1,0 +1,6 @@
+# Local secrets / machine-specific config
+config.local.js
+
+# OS files
+.DS_Store
+Thumbs.db
