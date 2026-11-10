@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" href="/views/style.css">
     <script type="module" src="/views/login.js"></script>
 </head>
 <body>
-    <h1>Inicio de sesión</h1>
+    <main class="main-app">
+        
+        <form class="form-login">
+            <header>Inicio de sesión</header>
 
-    <form>
-        <label for="tTxtUsername">Usuario:</label>
-        <input type="text" id="tTxtUsername" value="emilys">
-
-        <label for="tTxtPassword">Contraseña</label>
-        <input type="password" id="tTxtPassword" value="emilyspass">
-
-        <button type="button" id="tButInitSession">Iniciar sesión</button>
-    </form>
+            <label for="tTxtUsername">Usuario:</label>
+            <input type="text" id="tTxtUsername" value="emilys">
+    
+            <label for="tTxtPassword">Contraseña</label>
+            <input type="password" id="tTxtPassword" value="emilyspass">
+    
+            <button class="btn" type="button" id="tButInitSession">Iniciar sesión</button>
+        </form>
+    </main>
 </body>
 </html>
