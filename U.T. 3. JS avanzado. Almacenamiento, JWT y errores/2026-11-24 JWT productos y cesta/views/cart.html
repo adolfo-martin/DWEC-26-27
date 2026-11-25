@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="module">
+        showCart();
+
+        function showCart() {
+            const cart = JSON.parse(window.localStorage.getItem('cart')) ?? [];
+            const nTbody = document.querySelector('#tSpnCart+table>tbody');
+            nTbody.innerHTML = '';
+            cart.forEach(item => {
+                nTbody.innerHTML += `
+            <tr>
+                <td>${item.title}</td>
+                <td>${item.price}</td>
+            </tr>
+        `;
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <span id="tSpnCart" data-quantity="0">🛒</span>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+            <tr>
+                <td><a href="./cart.html">Ver cesta</a></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
