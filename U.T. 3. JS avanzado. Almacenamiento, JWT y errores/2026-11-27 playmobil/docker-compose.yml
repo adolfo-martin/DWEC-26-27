@@ -1,0 +1,16 @@
+name: playmobil
+
+services:
+  authentication:
+    image: adomargon/node-authentication:1.8
+    container_name: authentication_container
+    ports:
+      - "7081:80"
+    restart: always
+
+  playmobil:
+    image: adomargon/server_playmobil:0.24
+    container_name: playmobil_container
+    ports:
+      - "7082:3000"
+    restart: always

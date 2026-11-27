@@ -1,0 +1,34 @@
+### Chequeo que haga bien la validacion
+POST http://192.168.88.217:7081/api/login_user
+content-type: application/x-www-form-urlencoded
+
+username=sonia.silverado
+&password=s
+
+#-----------------------------------
+
+### Retrieve series success
+GET http://192.168.88.217:7082/api/series
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbmlhLnNpbHZlcmFkbyIsImZpcnN0bmFtZSI6IlNvbmlhIiwibGFzdG5hbWUiOiJTaWx2ZXJhZG8iLCJpYXQiOjE3OTU3ODE2MTUsImV4cCI6MTc5NTc5NjAxNX0.tZm9vfjm1w3TBPHLXMkkii8GqVKFWlkXWyzx_PlOx5s
+
+### Retrieve serie success
+GET http://192.168.88.217:7082/api/serie/7bc17d34-6858-4b51-9ccd-7e280ec3b5be
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbmlhLnNpbHZlcmFkbyIsImZpcnN0bmFtZSI6IlNvbmlhIiwibGFzdG5hbWUiOiJTaWx2ZXJhZG8iLCJpYXQiOjE3OTU3ODE2MTUsImV4cCI6MTc5NTc5NjAxNX0.tZm9vfjm1w3TBPHLXMkkii8GqVKFWlkXWyzx_PlOx5s
+
+### Retrieve boxes success
+GET http://192.168.88.217:7082/api/serie/7bc17d34-6858-4b51-9ccd-7e280ec3b5be/boxes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbmlhLnNpbHZlcmFkbyIsImZpcnN0bmFtZSI6IlNvbmlhIiwibGFzdG5hbWUiOiJTaWx2ZXJhZG8iLCJpYXQiOjE3OTU3ODE2MTUsImV4cCI6MTc5NTc5NjAxNX0.tZm9vfjm1w3TBPHLXMkkii8GqVKFWlkXWyzx_PlOx5s
+
+### Retrieve box by uuid success
+GET http://192.168.88.217:7082/api/box/df94b9ba-d532-46fb-a3b4-7c2aacf4f770
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbmlhLnNpbHZlcmFkbyIsImZpcnN0bmFtZSI6IlNvbmlhIiwibGFzdG5hbWUiOiJTaWx2ZXJhZG8iLCJpYXQiOjE3OTU3ODE2MTUsImV4cCI6MTc5NTc5NjAxNX0.tZm9vfjm1w3TBPHLXMkkii8GqVKFWlkXWyzx_PlOx5s
+
+### Retrieve figures of box by uuid success
+GET http://192.168.88.217:7082/api/box/df94b9ba-d532-46fb-a3b4-7c2aacf4f770/figures
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbmlhLnNpbHZlcmFkbyIsImZpcnN0bmFtZSI6IlNvbmlhIiwibGFzdG5hbWUiOiJTaWx2ZXJhZG8iLCJpYXQiOjE3OTU3ODE2MTUsImV4cCI6MTc5NTc5NjAxNX0.tZm9vfjm1w3TBPHLXMkkii8GqVKFWlkXWyzx_PlOx5s
+
+### Retrieve figure by uuid success
+GET http://192.168.88.217:7082/api/figure/466b422c-383a-4fef-8575-a8e68f9e563d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbmlhLnNpbHZlcmFkbyIsImZpcnN0bmFtZSI6IlNvbmlhIiwibGFzdG5hbWUiOiJTaWx2ZXJhZG8iLCJpYXQiOjE3OTU3ODE2MTUsImV4cCI6MTc5NTc5NjAxNX0.tZm9vfjm1w3TBPHLXMkkii8GqVKFWlkXWyzx_PlOx5s
+
+### http://192.168.88.217:7082/assets/roman-soldier.jpg
